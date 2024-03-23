@@ -3,11 +3,37 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  createRoutesFromElements,
+  Routes,
+} from "react-router-dom";
+import SignIn from './Components/Auth/SignIn/SignIn';
+import SignUp from './Components/Auth/SignUp/SignUp';
+import Home from './Layout/Home';
+import TestModal from './Components/Modal/TestModal';
+import PostDetail from './Components/Posts/PostDetail';
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route path='/' element={<Home />} />
+      <Route path='sign-in' element={<SignIn />} />
+      <Route path='sign-up' element={<SignUp />} />
+      <Route path='test' element={<TestModal/>}/>
+      <Route path='post/:postId' element={<PostDetail/>}/>
+    </Route>
+  )
+);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 
