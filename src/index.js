@@ -23,7 +23,7 @@ const router = createBrowserRouter(
       <Route path='/' element={<Home />} />
       <Route path='sign-in' element={<SignIn />} />
       <Route path='sign-up' element={<SignUp />} />
-      
+      <Route path='test' element={TestModal}/>
       
       <Route path='post/:postId' element={<PostDetail/>}/>
     </Route>
