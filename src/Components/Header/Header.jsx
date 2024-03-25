@@ -14,7 +14,7 @@ const Header = ()=>{
                     <Link>Home</Link>
                     <Link to='sign-in'>Sign in</Link>
                     <Link to='sign-up'>Create an account</Link>
-                    <Link to='test'>Test</Link>
+    
                 </div>
             </div>
             <div>
